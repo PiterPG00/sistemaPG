@@ -121,7 +121,7 @@ public class EntradaControle {
             entrada.setNomeContrato(contrato.getNomeContrato());
 
             entradaRepositorio.saveAndFlush(entrada);
-//            contratoRepositorio.saveAndFlush(contrato);
+            contratoRepositorio.saveAndFlush(contrato);
             return cadastrar(new Entrada());
         }
         return cadastrar(entrada);

@@ -18,6 +18,7 @@ public class Produto implements Serializable {
     private String nome;
     private Double quantidade = 0.00;
     private String precoVenda;
+    private String medida;
 
     public Long getId() {
         return id;
@@ -51,8 +52,20 @@ public class Produto implements Serializable {
         this.precoVenda = precoVenda;
     }
 
+    public String getMedida() {
+        return medida;
+    }
+
+    public void setMedida(String medida) {
+        this.medida = medida;
+    }
+
     public String quantidade2(){
-        return quantidade + " kg";
+        if(medida.equals("unidade")){
+            return String.valueOf((quantidade.intValue())) + " Un";
+        }else{
+            return quantidade + " kg";
+        }
     }
 
     public String precoVenda2(){

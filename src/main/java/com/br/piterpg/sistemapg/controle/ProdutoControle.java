@@ -25,7 +25,6 @@ public class ProdutoControle {
         return mv;
     }
 
-
     @GetMapping("/listaProduto")
     public ModelAndView listar() {
         ModelAndView mv = new ModelAndView("administrativo/produtos/lista");
